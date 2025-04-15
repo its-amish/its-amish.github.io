@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amish | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+      transform: scale(1.1);
+    }
+
+    .gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+    }
+
+    body {
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Hero section styles */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .hero-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    
+    .hero-text h1 {
+      font-size: 6rem;
+      font-weight: 700;
+      letter-spacing: 10px;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <img src="amish.jpeg" alt="Background" class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>AMISH</h1>
+    </div>
+  </section>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#photos">Photos</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#cv">CV</a>
+  </nav>
+
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm Amish, and I love Maths and Competitive Programming.<br />
+      I play Basketball and Tennis (trying to get better at both).<br />
+      I'm also interested in philosophical ideas and figuring out what I truly want from life—because that, to me, is the real intelligence test.
+    </p>
+  </section>
+
+  <section class="section" id="photos">
+    <h2>Photo Gallery</h2>
+    <div class="slideshow-container">
+      <!-- Slideshow images will be added here via JavaScript -->
+    </div>
+    <div class="slideshow-dots">
+      <!-- Dots/indicators will be added here via JavaScript -->
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>BTech-IIITH(CSE)</li>
+      <li>Class 10th - Rajasthan Board (96%)</li>
+      <li>Class 12th - Rajasthan Board (83%)</li>
+    </ul>
+  </section>
+
+  <section class="section" id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Proficient in C/C++</li>
+      <li>Completed a course in Web Development</li>
+      <li>Built a Smart Health Monitoring System using ESP32</li>
+    </ul>
+  </section>
+
+  <section class="section" id="cv">
+    <h2>My CV</h2>
+    <p><a href="Amish_CV.pdf" target="_blank" style="color:#fff; text-decoration:underline;">Download CV</a></p>
+  </section>
+
+  <footer>
+    <p>Connect with me:</p>
+    <ul>
+      <li><a href="https://github.com/its-amish" target="_blank">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/AmishGoyal" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:amish.goyal@students.iiit.ac.in">Email</a></li>
+    </ul>
+    <p style="margin-top: 10px;">&copy; 2025 Amish. All rights reserved.</p>
+  </footer>
+
+  <script src="slideshow.js"></script>
+  <script src="textanalyzer.js"></script>
+  <script src="userTracker.js"></script>
+</body>
+</html>
